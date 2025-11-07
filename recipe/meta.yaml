@@ -1,5 +1,5 @@
 {% set name = "ncdata" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bda53adc0f76a805038300ac4f8cac0a4cb2745c2c1d1d7248c3707e4b482a3b
+  sha256: ba4505614e6b8a157a812c07d01168788c87eb566d9d510ea556483fd3887651
 
 build:
   number: 0
