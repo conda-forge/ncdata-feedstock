@@ -11,9 +11,9 @@ source:
   sha256: 26f07e7e057ad2ed15bc3e7b757baabcfb7189be587d4a30103b559e734c25af
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -32,8 +32,11 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - ncdata
+  commands:
+    - pip check
 
 about:
   home: https://github.com/pp-mo/ncdata
